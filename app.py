@@ -10,14 +10,14 @@ car_data = pd.read_csv('vehicles_us.csv')
 
 # Caixa de seleção para histograma
 if st.checkbox('Mostrar histograma da quilometragem'):
-    st.write("Criando um histograma para a coluna 'odômetro'")
+    st.write("Histograma para 'odômetro'")
     fig_hist = px.histogram(car_data, x='odometer',
                             title='Distribuição da Quilometragem')
     st.plotly_chart(fig_hist, use_container_width=True)
 
 # Caixa de seleção para gráfico de dispersão
 if st.checkbox('Mostrar gráfico de dispersão (preço vs odômetro)'):
-    st.write("Criando um gráfico de dispersão: Preço vs Quilometragem")
+    st.write("Gráfico de dispersão: Preço vs Quilometragem")
     fig_scatter = px.scatter(car_data, x='odometer',
                              y='price', title='Preço vs Quilometragem')
     st.plotly_chart(fig_scatter, use_container_width=True)
