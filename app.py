@@ -6,7 +6,7 @@ import plotly.express as px
 st.header("Análise Exploratória de Vendas de Veículos")
 
 # Carregar os dados (importante: caminho relativo correto)
-car_data = pd.read_csv('vehicles.csv')
+car_data = pd.read_csv('vehicles_us.csv')
 
 # Caixa de seleção para histograma
 if st.checkbox('Mostrar histograma da quilometragem'):
